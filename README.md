@@ -17,13 +17,6 @@ graph TD
         PM[Price Monitor]
         PC[Profitability Calculator]
         TE[Trade Executor]
-        AL[Activity Logger]
-    end
-
-    subgraph Infrastructure
-        WS[WebSocket Server]
-        DB[(Price Database)]
-        API[Express API]
     end
 
     PM -->|Price Data| PC
@@ -32,11 +25,6 @@ graph TD
     AC -->|Flash Loan| dYdX
     AC -->|Swap| UniswapV2
     AC -->|Swap| SushiSwap
-    WS -->|Real-time Data| PM
-    PM -->|Store Data| DB
-    API -->|Query Data| DB
-    AL -->|Log Activity| DB
-    AC -->|Trade Result| AL
 ```
 
 ## 🚀 Key Features
